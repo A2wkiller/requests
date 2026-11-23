@@ -5,6 +5,9 @@ dev
 ---
 
 - \[Short description of non-trivial change.\]
+- `parse_dict_header` now strips optional whitespace around `=` in key=value
+  pairs (per RFC 9110), fixing `HTTPDigestAuth` against servers that send
+  challenges like `Digest realm = "...", nonce = "..."`. (#7651)
 
 
 2.34.2 (2026-05-14)
